@@ -1,21 +1,22 @@
 from CalculadoraIRRF import CalculadoraIRRF
+import pytest
 
-import unittest
+def test_01_subtrair():
+    calc = CalculadoraIRRF()
+    p1 = calc.subtrair_base_irrf(3000)
+    assert p1 == 1096.02
 
+def test_02_subtrair():
+    calc = CalculadoraIRRF()
+    p1 = calc.subtrair_base_irrf(5000)
+    assert p1 == 3096.02
 
-class TestCalculadora(unittest.TestCase):
-    def test(self):
-        calc = CalculadoraIRRF()
+def test_03_subtrair():
+    calc = CalculadoraIRRF()
+    p1 = calc.subtrair_base_irrf(7000)
+    assert p1 == 5096.02
 
-        self.assertEqual(calc.subtrairBaseIRRF(3000), 1096.02)
-        self.assertEqual(calc.subtrairBaseIRRF(5000), 3096.02)
-        self.assertEqual(calc.subtrairBaseIRRF(7000), 5096.02)
-        self.assertEqual(calc.subtrairBaseIRRF(9000), 7096.02)
-
-def runTests():
-    suite = unittest.defaultTestLoader.loadTestsFromTestCase(TestCalculadora)
-    unittest.TextTestRunner(verbosity = 2, failfast = True).run(suite)
-
-
-if __name__ == '__main__':
-   runTests()
+def test_04_subtrair():
+    calc = CalculadoraIRRF()
+    p1 = calc.subtrair_base_irrf(9000)
+    assert p1 == 7096.02
