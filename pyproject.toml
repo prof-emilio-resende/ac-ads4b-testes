@@ -1,0 +1,14 @@
+[build-system]
+build-backend = "poetry.masonry.api"
+requires = ["poetry>=0.12"]
+
+[tool]
+[tool.poetry]
+authors = ["prof-emilio-resende <emilio.resende@faculdadeimpacta.com.br>"]
+description = ""
+name = "ac-ads4b-testes-2"
+version = "0.1.0"
+[tool.poetry.dependencies]
+pytest = "^5.4"
+python = "^3.7"
+[tool.poetry.dev-dependencies]
