@@ -1,0 +1,4 @@
+{
+  "test.py::test_01_soma": true,
+  "test2.py::TestCalculadora::test_01_soma": true
+}
