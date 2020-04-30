@@ -1,22 +1,22 @@
-import unittest
-import hashlib
+import pytest
+from calculadora import enquadramento_aliquota
 
-class TestStringMethods(unittest.TestCase):
-    def teste_enquadramento_01(self):
-        self.assertEqual(enquadramento_aliquota(1800), 'Isento')
+@pytest.mark.parametrize('salario,expected', [(1000, 'Isento')])
+def teste_enquadramento_01(salario, expected):
+    assert enquadramento_aliquota(salario) == expected
 
-    def teste_enquadramento_02(self):
-        self.assertEqual(enquadramento_aliquota(2000), 7.5)
+@pytest.mark.parametrize('salario,expected', [(2000, 7.5)])
+def teste_enquadramento_02(salario, expected):
+    assert enquadramento_aliquota(salario) == expected
 
-    def teste_enquadramento_03(self):
-        self.assertEqual(enquadramento_aliquota(3000), 15)
+@pytest.mark.parametrize('salario,expected', [(3000, 15)])
+def teste_enquadramento_03(salario, expected):
+    assert enquadramento_aliquota(salario) == expected
 
-    def teste_enquadramento_04(self):
-        self.assertEqual(enquadramento_aliquota(4000), 22.5)
+@pytest.mark.parametrize('salario,expected', [(4000, 22.5)])
+def teste_enquadramento_04(salario, expected):
+    assert enquadramento_aliquota(salario) == expected
 
-    def teste_enquadramento_05(self):
-        self.assertEqual(enquadramento_aliquota(5000), 27.5)
-
-def runTests():
-        suite = unittest.defaultTestLoader.loadTestsFromTestCase(TestStringMethods)
-        unittest.TextTestRunner(verbosity=2,failfast=True).run(suite)
+@pytest.mark.parametrize('salario,expected', [(5000, 27.5)])
+def teste_enquadramento_05(salario, expected):
+    assert enquadramento_aliquota(salario) == expected
