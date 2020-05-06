@@ -1,0 +1,6 @@
+from calculadora_ir import calcula_final
+import pytest
+
+@pytest.mark.parametrize('valor, expected', [(3000, 57.45)])
+def test_calcula(valor, expected):
+    assert calcula_final(valor) == expected
