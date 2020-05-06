@@ -17,6 +17,14 @@ version = "19.3.0"
 
 [[package]]
 category = "main"
+description = "Calculadora básica"
+name = "calculadora"
+optional = false
+python-versions = "*"
+version = "0.1"
+
+[[package]]
+category = "main"
 description = "Cross-platform colored terminal text."
 marker = "sys_platform == \"win32\""
 name = "colorama"
@@ -133,12 +141,13 @@ python-versions = ">=3.6"
 version = "3.1.0"
 
 [metadata]
-content-hash = "68ccb4df26dec1062fe3dcd84089047597a53438d2f1d27a7e0e59c6a178d5e7"
+content-hash = "6a1706b913fb31ee959f8780908af5141571e85e35b13c5cfcc0c3ba3d4ddf6a"
 python-versions = "^3.7"
 
 [metadata.hashes]
 atomicwrites = ["6d1784dea7c0c8d4a5172b6c620f40b6e4cbfdf96d783691f2e1302a7b88e197", "ae70396ad1a434f9c7046fd2dd196fc04b12f9e91ffb859164193be8b6168a7a"]
 attrs = ["08a96c641c3a74e44eb59afb61a24f2cb9f4d7188748e76ba4bb5edfa3cb7d1c", "f7b7ce16570fe9965acd6d30101a28f62fb4a7f9e926b3bbc9b61f8b04247e72"]
+calculadora = ["112210d6d2f14d5a50cdb6cf1406f60ace47448db58f44130277791c1ad49ee2"]
 colorama = ["7d73d2a99753107a36ac6b455ee49046802e59d9d076ef8e47b61499fa29afff", "e96da0d330793e2cb9485e9ddfd918d456036c7149416295932478192f4436a1"]
 importlib-metadata = ["2a688cbaa90e0cc587f1df48bdc97a6eadccdcd9c35fb3f976a09e3b5016d90f", "34513a8a0c4962bc66d35b359558fd8a5e10cd472d37aec5f66858addef32c1e"]
 more-itertools = ["5dd8bcf33e5f9513ffa06d5ad33d78f31e1931ac9a18f33d37e77a180d393a7c", "b1ddb932186d8a6ac451e1d95844b382f55e12686d51ca0c68b6f61f2ab7a507"]
